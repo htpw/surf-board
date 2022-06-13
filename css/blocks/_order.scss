@@ -1,6 +1,6 @@
 .order{
   height: 100vh;
-  background: linear-gradient(rgba(43, 43, 43, 0.4), rgba(43, 43, 43, 0.4)), url(../../img/order-bg.jpg);
+  background: linear-gradient(rgba(43, 43, 43, 0.4), rgba(43, 43, 43, 0.4)), url(../img/order-bg.jpg);
   background-size: cover;
   &__container{
     display: flex;
@@ -96,7 +96,7 @@
       border-radius: 4px;
       &::before{
 
-        background: url(../../img/icons/checked.png) center center no-repeat;
+        background: url(../img/icons/checked.png) center center no-repeat;
       }
     }
   }

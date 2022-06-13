@@ -167,7 +167,7 @@ address {
 }
 
 .hello {
-  background: url(../../img/hello-bg.jpg) no-repeat;
+  background: url(../img/hello-bg.jpg) no-repeat;
   background-size: cover;
   height: 100vh;
   color: #fff;
@@ -263,7 +263,7 @@ address {
   content: none;
 }
 .advantages__item::before {
-  content: url(../../img/icons/separator.png);
+  content: url(../img/icons/separator.png);
   position: absolute;
   top: 52px;
   right: 0px;
@@ -319,7 +319,7 @@ address {
           flex: 1;
 }
 .offers__img {
-  background: url(../../img/icons/offer-bg.png) no-repeat center center;
+  background: url(../img/icons/offer-bg.png) no-repeat center center;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,7 +452,7 @@ address {
   line-height: 25px;
 }
 .team__name::after {
-  content: url(../../img/icons/arrow.png);
+  content: url(../img/icons/arrow.png);
   padding-left: 4px;
 }
 .team__prof {
@@ -467,7 +467,7 @@ address {
 
 .slider {
   height: 100vh;
-  background: url(../../img/Slider.png) no-repeat;
+  background: url(../img/Slider.png) no-repeat;
   background-size: cover;
 }
 
@@ -577,8 +577,8 @@ address {
 
 .order {
   height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 43, 43, 0.4)), to(rgba(43, 43, 43, 0.4))), url(../../img/order-bg.jpg);
-  background: linear-gradient(rgba(43, 43, 43, 0.4), rgba(43, 43, 43, 0.4)), url(../../img/order-bg.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(43, 43, 43, 0.4)), to(rgba(43, 43, 43, 0.4))), url(../img/order-bg.jpg);
+  background: linear-gradient(rgba(43, 43, 43, 0.4), rgba(43, 43, 43, 0.4)), url(../img/order-bg.jpg);
   background-size: cover;
 }
 .order__container {
@@ -702,7 +702,7 @@ address {
   border-radius: 4px;
 }
 .radio--checkbox .radio__visible::before {
-  background: url(../../img/icons/checked.png) center center no-repeat;
+  background: url(../img/icons/checked.png) center center no-repeat;
 }
 .radio__title {
   padding-left: 10px;
@@ -710,7 +710,7 @@ address {
 
 .map {
   height: 100vh;
-  background: url(../../img/map.png);
+  background: url(../img/map.png);
   background-size: cover;
 }
 
