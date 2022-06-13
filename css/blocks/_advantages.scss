@@ -1,0 +1,79 @@
+.advantages{
+  height: 100vh;
+  padding: 110px 80px;
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__title{
+    color: $colorBlack;
+  }
+  &__subtitle{
+    color: $colorGrey;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 40%;
+    text-align: center;
+  }
+  &__list{
+    display: flex;
+  }
+  &__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding: 0 3%;
+    position: relative;
+    &:first-child{
+      padding-left: 0;
+    }
+    &:last-child{
+      padding-right: 0;
+      &::before{
+        content: none;
+      }
+    }
+    &::before{
+      content: url(../../img/icons/separator.png);
+      position: absolute;
+      top: 52px;
+      right: 0px;
+      transform: translateX(50%);
+    }
+  }
+  &__logo{
+    display: inline-block;
+    width: 128px;
+    height: 128px;
+    background: #F2F5F4;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  &__image{
+    position: absolute;
+    max-width: 68px;
+    max-height: 68px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &__name{
+    color:$colorBlack;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 32px;
+    padding-bottom: 20px;
+  }
+  &__desc{
+    color: $colorGrey;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,27 @@
+$containerWidth:1100px;
+$baseFontSize:18px;
+
+//colors  
+$colorBlack:#292929;
+$colorGrey:#666666;
+
+
+//normalize
+@import "./normalize.css";
+
+//fonts and base
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@300;400;500;700;800&display=swap');
+@import "./_base.scss";
+
+//blocks
+@import "./blocks/header";
+@import "./blocks/hello";
+@import "./blocks/advantages";
+@import "./blocks/offers";
+@import "./blocks/team";
+@import "./blocks/slider";
+@import "./blocks/reviews";
+@import "./blocks/work";
+@import "./blocks/order";
+@import "./blocks/map";
+@import "./blocks/footer";

@@ -1,0 +1,106 @@
+.order{
+  height: 100vh;
+  background: linear-gradient(rgba(43, 43, 43, 0.4), rgba(43, 43, 43, 0.4)), url(../../img/order-bg.jpg);
+  background-size: cover;
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+.form{
+  display: flex;
+  &__col{
+    flex: 1;
+    margin-right: 27px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__row{
+    display: flex;
+    margin-bottom: 12px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__block{
+    flex: 1;
+    margin-right: 12px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__input{
+    width: 100%;
+    padding: 18px 12px;
+    border-radius: 4px;
+    border: 3px transparent solid;
+    &:focus{
+      border: 3px solid #FEDB3F;
+      outline: none;
+    }
+    &--text{
+      height: 152px;
+      resize: none;
+      padding-bottom: 40px;
+    }
+  }
+  &__controls{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+}
+
+.radio{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding-right: 10px;
+  &:last-child{
+    padding-right: 0;
+  }
+  &__elem{
+    display: none;
+    &:checked ~ .radio__visible{
+      &::before{
+        display: block;
+      }
+    }
+  }
+  &__visible{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    border-radius: 50%;
+    background: #fff;
+    &::before{
+      display: none;
+      content: "";
+      width: 13px;
+      height: 13px;
+      position: absolute;
+      background: #FEDB3F;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  &--checkbox{
+    padding-bottom: 20px;
+    .radio__visible{
+      border-radius: 4px;
+      &::before{
+
+        background: url(../../img/icons/checked.png) center center no-repeat;
+      }
+    }
+  }
+  &__title{
+    padding-left: 10px;
+  }
+}

@@ -1,0 +1,41 @@
+.team{
+  height: 100vh;
+  padding: 65px 80px;
+  color: $colorBlack;
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__title{
+    align-self: center;
+  }
+  &__list{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    width: 220px;
+  }
+  &__content{
+    text-align: center;
+  }
+  &__name{
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 25px;
+    &::after{
+      content: url(../../img/icons/arrow.png);
+      padding-left: 4px;
+    }
+  }
+  &__prof{
+    font-weight: 400;
+    line-height: 22px;
+  }
+  &__work{
+    color: $colorGrey;
+    font-weight: 300;
+    line-height: 22px;
+  }
+}

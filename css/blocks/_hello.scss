@@ -1,0 +1,26 @@
+.hello{
+  background:url(../../img/hello-bg.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  padding: 28px 80px 61px;
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+  }
+  &__title{
+    width:40%;
+  }
+  &__subtitle{
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+  }
+  &__features-list{
+    display: flex;
+    align-items: center;
+  }
+
+}

@@ -1,0 +1,36 @@
+.footer{
+  color: $colorBlack;
+  &__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px 28px;
+  }
+  &__location{
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 24px;
+    padding-bottom: 6px;
+  }
+  &__phone{
+    display: flex;
+    &-img{
+      padding-right: 7px;
+    }
+    &-desc{
+      font-weight: 400;
+      font-size: 21px;
+      line-height: 21px;
+    }
+  }
+  &__socials-list{
+    display: flex;
+    align-items: center;
+  }
+  &__socials-item{
+    padding-right: 14px;
+    &:last-child{
+      padding-right: 0;
+    }
+  }
+}

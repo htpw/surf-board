@@ -1,0 +1,63 @@
+.reviews{
+  height: 100vh;
+  &__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 62px 80px;
+  }
+  &__content{
+    background: #F8FAF9;
+    display: flex;
+    justify-content: space-between;
+    padding: 42px;  
+    color:$colorBlack; 
+  }
+  &__image{
+    max-width: 253px;
+  }
+  &__report{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 60%;
+    padding-right: 6%;
+  }
+  &__subtitle{
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 32px;
+  }
+  &__text{
+    font-weight: 400;
+    line-height: 22px;
+  }
+  &__name{
+    font-weight: 500;
+    line-height: 24px;
+  }
+  &__list{
+    display: flex;
+  }
+  &__item{
+    padding-right: 6px;
+    width: 80px;
+    height: 80px;
+    &:last-child{
+      padding-right: 0;
+    }
+  }
+  &__link{
+    overflow: hidden;
+
+  }
+  &__logo{
+    border-radius: 50%;
+    border: 6px solid transparent;
+  }
+  &__link--active &__logo{
+    border: 6px #FEDB3F solid;
+  }
+}
