@@ -1,11 +1,11 @@
 .team{
   height: 100vh;
-  padding: 65px 80px;
   color: $colorBlack;
   &__container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 3% 80px;
   }
   &__title{
     align-self: center;
@@ -13,11 +13,12 @@
   &__list{
     display: flex;
     justify-content: space-between;
+    padding-bottom: 5%;
   }
   &__item{
     width: 220px;
   }
-  &__content{
+  &__link{
     text-align: center;
   }
   &__name{

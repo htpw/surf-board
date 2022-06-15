@@ -7,10 +7,15 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding: 0 80px;
+  }
+  &__title{
+    margin-top: 2%;
   }
 }
 .form{
   display: flex;
+  margin-bottom: 8%;
   &__col{
     flex: 1;
     margin-right: 27px;
@@ -50,7 +55,7 @@
   &__controls{
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 20px;
+    padding-top: 5%;
   }
 }
 

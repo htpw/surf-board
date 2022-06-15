@@ -3,24 +3,31 @@
   background-size: cover;
   height: 100vh;
   color: #fff;
-  padding: 28px 80px 61px;
   &__container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  
+    padding: 27px 80px 61px;
+  }
+  &__logo{
+    margin-right: 3%;
   }
   &__title{
-    width:40%;
+    width: 53.5%;
   }
   &__subtitle{
     font-weight: 400;
     font-size: 21px;
     line-height: 25px;
+    padding-bottom: 2%;
+  }
+  &__features{
+    padding-top: 5%;
   }
   &__features-list{
     display: flex;
     align-items: center;
+    padding-right: 46%;
   }
 
 }

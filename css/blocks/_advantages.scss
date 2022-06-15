@@ -1,14 +1,15 @@
 .advantages{
   height: 100vh;
-  padding: 110px 80px;
   &__container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding: 6% 80px;
   }
   &__title{
     color: $colorBlack;
+    padding-top: 3%;
   }
   &__subtitle{
     color: $colorGrey;
@@ -17,9 +18,11 @@
     line-height: 22px;
     max-width: 40%;
     text-align: center;
+    padding-bottom: 3%;
   }
   &__list{
     display: flex;
+    padding-bottom: 2%;
   }
   &__item{
     display: flex;

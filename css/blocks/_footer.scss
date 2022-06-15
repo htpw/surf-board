@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px 28px;
+    padding: 15px 80px 28px;
   }
   &__location{
     font-weight: 400;
@@ -28,9 +28,9 @@
     align-items: center;
   }
   &__socials-item{
-    padding-right: 14px;
+    margin-right: 9px;
     &:last-child{
-      padding-right: 0;
+      margin-right: 0;
     }
   }
 }

@@ -8,7 +8,7 @@
   }
   &__img{
     background: url(../img/icons/offer-bg.png) no-repeat center center;
-    width: 100%;
+    width: 67%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -23,7 +23,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    padding: 210px 0;
+    padding: 4% 0 9%;
   }
   &__parameters{
     font-weight: 700;
@@ -45,6 +45,7 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 43px;
+    padding-top: 5%;
   }
   &__text{
     color: $colorGrey;
@@ -77,7 +78,7 @@
       font-weight: 300;
       font-size: 60px;
       line-height: 60px;
-      padding-right: 30px;
+      padding-right: 57px;
     }
   }
 }
