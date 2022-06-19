@@ -5,7 +5,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 6% 80px;
+    padding: 6% rem(80px);
+    @include phones{
+      padding: 0;
+    }
   }
   &__header{
     display: flex;
@@ -14,19 +17,25 @@
   }
   &__title{
     color: $colorBlack;
-    margin-bottom: 17px;
+    margin-bottom: rem(17px);
   }
   &__subtitle{
     color: $colorGrey;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: rem(18px);
+    line-height: rem(22px);
     max-width: 68%;
     text-align: center;
+    @include tablets{
+      max-width: 70%;
+    }
   }
   &__list{
     display: flex;
     padding-bottom: 2%;
+    @include phones{
+      flex-direction: column;
+    }
   }
   &__item{
     display: flex;
@@ -35,8 +44,15 @@
     flex: 1;
     padding: 0 3%;
     position: relative;
+    @include phones{
+      flex-direction: row;
+      padding: 0 rem(10px);
+    }
     &:first-child{
       padding-left: 0;
+      @include phones{
+        padding: 0 rem(10px);
+    }
     }
     &:last-child{
       padding-right: 0;
@@ -47,25 +63,40 @@
     &::before{
       content: url(../img/icons/separator.png);
       position: absolute;
-      top: 52px;
-      right: 0px;
+      top: rem(52px);
+      right: rem(0px);
       transform: translateX(50%);
+      @include tablets{
+        display: none;
+      }
+    }
+  }
+  &__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include phones{
+      align-items: flex-start;
     }
   }
   &__logo{
     display: inline-block;
-    width: 128px;
-    height: 128px;
+    width: rem(128px);
+    height: rem(128px);
     background: #F2F5F4;
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
+    @include phones{
+      padding: rem(64px) rem(64px);
+      margin-right: rem(12px);
+    }
   }
   &__image{
     position: absolute;
-    max-width: 68px;
-    max-height: 68px;
+    max-width: rem(68px);
+    max-height: rem(68px);
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -73,14 +104,20 @@
   &__name{
     color:$colorBlack;
     font-weight: 700;
-    font-size: 27px;
-    line-height: 32px;
-    padding-bottom: 20px;
+    font-size: rem(27px);
+    line-height: rem(32px);
+    padding-bottom: rem(20px);
+    @include phones{
+      padding-bottom: rem(9px);
+    }
   }
   &__desc{
     color: $colorGrey;
     font-weight: 300;
-    line-height: 22px;
+    line-height: rem(22px);
     text-align: center;
+    @include phones{
+      text-align: start;
+    }
   }
 }

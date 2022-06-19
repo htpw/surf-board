@@ -3,20 +3,28 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: 9%;
-}
-
-.logo{
-  max-width: 5%;
+  @include tablets{
+    background: #1968B1;
+    margin: 0 -1%;
+    height: 91px;
+    padding-bottom: 0;
+  }
 }
 
 .menu__list{
   display: flex; 
+  flex-wrap: wrap;
+  justify-content: center;
+  @include tablets{
+    display: none;
+  }
 }
 
 .menu__item{
-  padding-right: 22px;
+  padding-right: rem(22px);
   font-weight: 700;
-  line-height: 20px;
+  line-height: rem(20px);
+  white-space: nowrap;
   &:last-child{
     padding-right: 0;
   }
@@ -25,10 +33,16 @@
 .phone{
   display: flex;
   font-weight: 700;
-  font-size: 22px;
-  line-height: 18px;
-  &__img{
-    padding-right: 6px;
+  font-size: rem(22px);
+  line-height: rem(18px);
+  white-space: nowrap;
+  &__image{
+    flex-shrink: 0;
+    padding-right: rem(6px);
+  }
+
+  @include tablets{
+    display: none;
   }
 }
 

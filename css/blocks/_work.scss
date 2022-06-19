@@ -1,13 +1,20 @@
 .work{
   height: 100vh;
+  background: #F8FAF9;
   &__container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    @include tablets{
+      justify-content: center;
+    }
   }
   &__title{
     padding-top: 4%;
+    @include tablets{
+      margin-bottom: rem(31px);
+    }
   }
   &__video{
     padding-bottom: 9%;

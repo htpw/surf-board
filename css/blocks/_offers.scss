@@ -5,9 +5,20 @@
     display: flex;
     justify-content: space-between;
     flex: 1;
+    @include tablets{
+      flex-direction: column;
+      align-items: center;
+      justify-content: normal;
+    }
   }
   &__img{
     background: url(../img/icons/offer-bg.png) no-repeat center center;
+    @include tablets{
+      background-size: 60%;
+    }
+    @include phones{
+      background-size: 77%;
+    }
     width: 67%;
     display: flex;
     align-items: center;
@@ -15,7 +26,10 @@
   }
   &__image{
     transform: rotate(30deg);
-    max-width: 150px;
+    max-width: rem(150px);
+    @include tablets{
+      max-width: rem(116px);
+    }
   }
   &__content{
     width: 50%;
@@ -24,39 +38,58 @@
     align-items: flex-start;
     justify-content: space-around;
     padding: 4% 0 9%;
+    @include tablets{
+      align-items: center;
+      text-align: center;
+      flex: 1;
+      width: 75%;
+      justify-content: normal;
+    }
   }
   &__parameters{
     font-weight: 700;
-    font-size: 14.0121px;
-    line-height: 17px;
+    font-size: rem(14px);
+    line-height: rem(17px);
     background: #3A587E;
-    border-radius: 4px;
-    max-width: 92px;
-    max-height: 92px;
-    padding: 17px 5px 12px;
+    border-radius: rem(4px);
+    max-width: rem(92px);
+    max-height: rem(92px);
+    padding: rem(17px) rem(5px) rem(12px);
     &-image{
       margin: auto;
-      margin-bottom: 7px;
+      margin-bottom: rem(7px);
+    }
+    @include tablets{
+      display: none;
     }
   }
   &__title{
     text-transform: uppercase;
     color: $colorBlack;
     font-weight: 700;
-    font-size: 36px;
-    line-height: 43px;
+    font-size: rem(36px);
+    line-height: rem(43px);
     padding-top: 5%;
+    @include tablets{
+      margin-bottom: rem(14px);
+    }
   }
   &__text{
     color: $colorGrey;
     font-weight: 400;
-    line-height: 22px;
+    line-height: rem(22px);
+    @include tablets{
+      margin-bottom: rem(24px);
+    }
   }
   &__property-list{
     display: flex;
+    @include tablets{
+      margin-bottom: rem(24px);
+    }
   }
   &__property-item{
-    padding-right: 50px;
+    padding-right: rem(50px);
     &:last-child{
       padding-right: 0;
     }
@@ -64,21 +97,21 @@
   &__property-title{
     color: $colorGrey;
     font-weight: 400;
-    line-height: 22px;
+    line-height: rem(22px);
   }
   &__property-value{
     color: #000;
     font-weight: 700;
-    line-height: 22px;
+    line-height: rem(22px);
   }
   &__price{
     display: flex;
     &-value{
       color: #151515;
       font-weight: 300;
-      font-size: 60px;
-      line-height: 60px;
-      padding-right: 57px;
+      font-size: rem(60px);
+      line-height: rem(60px);
+      padding-right: rem(57px);
     }
   }
 }

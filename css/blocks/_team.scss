@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 3% 80px;
+    padding: 3% rem(80px);
   }
   &__title{
     align-self: center;
@@ -14,29 +14,38 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 5%;
+    @include tablets{
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__item{
-    width: 220px;
+    width: rem(220px);
+  }
+  &__image{
+    @include tablets{
+      display: none;
+    }
   }
   &__link{
     text-align: center;
   }
   &__name{
     font-weight: 700;
-    font-size: 21px;
-    line-height: 25px;
+    font-size: rem(21px);
+    line-height: rem(25px);
     &::after{
       content: url(../img/icons/arrow.png);
-      padding-left: 4px;
+      padding-left: rem(4px);
     }
   }
   &__prof{
     font-weight: 400;
-    line-height: 22px;
+    line-height: rem(22px);
   }
   &__work{
     color: $colorGrey;
     font-weight: 300;
-    line-height: 22px;
+    line-height: rem(22px);
   }
 }

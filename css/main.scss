@@ -1,9 +1,15 @@
 $containerWidth:1100px;
 $baseFontSize:18px;
 
+//breakpoints
+$tablets:768px;
+$phones:480px;
+
 //colors  
 $colorBlack:#292929;
 $colorGrey:#666666;
+
+@import "./media";
 
 
 //normalize
@@ -25,3 +31,4 @@ $colorGrey:#666666;
 @import "./blocks/order";
 @import "./blocks/map";
 @import "./blocks/footer";
+@import "./blocks/hamburger";

@@ -2,60 +2,98 @@
   height: 100vh;
   background: linear-gradient(rgba(43, 43, 43, 0.4), rgba(43, 43, 43, 0.4)), url(../img/order-bg.jpg);
   background-size: cover;
+  @include tablets{
+    background-position: 43% center;
+  }
   &__container{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding: 0 80px;
+    padding: 0 rem(80px);
+    @include tablets{
+      justify-content: center;
+    }
+    @include phones{
+      padding: 0;
+    }
   }
   &__title{
     margin-top: 2%;
+    @include tablets{
+      margin-bottom: rem(30px);
+    }
   }
 }
 .form{
   display: flex;
   margin-bottom: 8%;
+  @include tablets{
+    flex-direction: column;
+    width: rem(500px);
+  }
   &__col{
     flex: 1;
-    margin-right: 27px;
+    margin-right: rem(27px);
+    @include tablets{
+      margin-right: 0;
+      margin-bottom: rem(14px);
+    }
     &:last-child{
       margin-right: 0;
     }
   }
   &__row{
     display: flex;
-    margin-bottom: 12px;
+    margin-bottom: rem(12px);
     &:last-child{
       margin-bottom: 0;
     }
   }
   &__block{
     flex: 1;
-    margin-right: 12px;
+    margin-right: rem(12px);
     &:last-child{
       margin-right: 0;
     }
   }
   &__input{
     width: 100%;
-    padding: 18px 12px;
-    border-radius: 4px;
-    border: 3px transparent solid;
+    padding: rem(18px) rem(12px);
+    border-radius: rem(4px);
+    border: rem(3px) transparent solid;
+    @include tablets{
+      padding: rem(8px) rem(10px);
+    }
     &:focus{
-      border: 3px solid #FEDB3F;
+      border: rem(3px) solid #FEDB3F;
       outline: none;
     }
     &--text{
-      height: 152px;
+      height: rem(152px);
       resize: none;
-      padding-bottom: 40px;
+      padding-bottom: rem(40px);
+      @include tablets{
+        height: rem(82px);
+      }
     }
   }
   &__controls{
     display: flex;
     flex-wrap: wrap;
     padding-top: 5%;
+    @include tablets{
+      padding-top: 2%;
+    }
+    @include phones{
+     justify-content: center;
+    }
+  }
+  &__btn{
+    @include tablets{
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 
@@ -64,7 +102,7 @@
   align-items: center;
   cursor: pointer;
   user-select: none;
-  padding-right: 10px;
+  padding-right: rem(10px);
   &:last-child{
     padding-right: 0;
   }
@@ -77,16 +115,16 @@
     }
   }
   &__visible{
-    width: 25px;
-    height: 25px;
+    width: rem(25px);
+    height: rem(25px);
     position: relative;
     border-radius: 50%;
     background: #fff;
     &::before{
       display: none;
       content: "";
-      width: 13px;
-      height: 13px;
+      width: rem(13px);
+      height: rem(13px);
       position: absolute;
       background: #FEDB3F;
       border-radius: 50%;
@@ -96,9 +134,12 @@
     }
   }
   &--checkbox{
-    padding-bottom: 20px;
+    padding-bottom: rem(20px);
+    @include tablets{
+      padding-bottom: rem(38px);
+    }
     .radio__visible{
-      border-radius: 4px;
+      border-radius: rem(4px);
       &::before{
 
         background: url(../img/icons/checked.png) center center no-repeat;
@@ -106,6 +147,6 @@
     }
   }
   &__title{
-    padding-left: 10px;
+    padding-left: rem(10px);
   }
 }

@@ -3,31 +3,64 @@
   background-size: cover;
   height: 100vh;
   color: #fff;
+  @include tablets{
+    background-position: 75% center;
+  }
   &__container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 27px 80px 61px;
+    padding: rem(27px) rem(80px) rem(61px);
+    @include tablets{
+      padding: 0;
+    }
   }
   &__logo{
     margin-right: 3%;
+    @include tablets{
+      padding: rem(26px) rem(35px);
+    }
+  }
+  &__content{
+    @include tablets{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
   }
   &__title{
     width: 53.5%;
-    margin-bottom: 17px;
+    margin-bottom: rem(17px);
+    @include tablets{
+      width: 90%;
+    }
+    @include phones{
+      width: 100%;
+    }
   }
   &__subtitle{
     font-weight: 400;
-    font-size: 21px;
-    margin-bottom: 60px;
+    font-size: rem(21px);
+    margin-bottom: rem(60px);
   }
   &__features{
     padding-top: 5%;
+    @include tablets{
+      display: none;
+    }
   }
   &__features-list{
     display: flex;
     align-items: center;
-    padding-right: 46%;
+    width: 75%;
+  }
+  &__btn{
+    @include tablets{
+      align-self: center;
+    }
   }
 
 }
