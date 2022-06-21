@@ -11,6 +11,17 @@
   }
 }
 
+.logo{
+  width: 56px;
+  height: 39px;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  margin-right: 3%;
+  @include tablets{
+    margin: rem(26px) rem(35px);
+  }
+}
+
 .menu__list{
   display: flex; 
   flex-wrap: wrap;
@@ -39,6 +50,10 @@
   &__image{
     flex-shrink: 0;
     padding-right: rem(6px);
+  }
+  &__img{
+    width: 13px;
+    height: 14px;
   }
 
   @include tablets{

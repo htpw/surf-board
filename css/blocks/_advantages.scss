@@ -94,6 +94,9 @@
     }
   }
   &__image{
+    width: 68px;
+    height: 68px;
+    color: #000;
     position: absolute;
     max-width: rem(68px);
     max-height: rem(68px);

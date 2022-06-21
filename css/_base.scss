@@ -133,7 +133,9 @@ menu{
 	display: flex;
 	align-items: center;
 	&__image{
-		padding-right: rem(14px);
+		margin-right: rem(14px);
+		width: 35px;
+		height: 35px;
 	}
 	&__desc{
 		width: 50%;

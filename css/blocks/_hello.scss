@@ -1,6 +1,7 @@
 .hello{
   background:url(../img/hello-bg.jpg) no-repeat;
   background-size: cover;
+  background-position: center center;
   height: 100vh;
   color: #fff;
   @include tablets{
@@ -13,12 +14,6 @@
     padding: rem(27px) rem(80px) rem(61px);
     @include tablets{
       padding: 0;
-    }
-  }
-  &__logo{
-    margin-right: 3%;
-    @include tablets{
-      padding: rem(26px) rem(35px);
     }
   }
   &__content{

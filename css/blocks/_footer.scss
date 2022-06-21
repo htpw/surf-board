@@ -30,7 +30,9 @@
       margin-bottom: rem(20px);
     }
     &-img{
-      padding-right: rem(7px);
+      width: 12px;
+      height: 12px;
+      margin-right: rem(7px);
     }
     &-desc{
       font-weight: 400;
@@ -46,6 +48,15 @@
     margin-right: rem(9px);
     &:last-child{
       margin-right: 0;
+    }
+  }
+  &__socials-image{
+    width: 20px;
+    height: 20px;
+    color: #B3B3B3;
+    transition: 0.3s;
+    &:hover{
+      color: #292929;
     }
   }
 }
