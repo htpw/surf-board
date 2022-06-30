@@ -533,23 +533,26 @@ menu {
   height: 100vh;
   background: #F8FAF9;
 }
+.offers__arrows {
+  height: 27px;
+  width: 13.5px;
+}
+.offers__left {
+  margin-left: 5.5555555556vw;
+}
+.offers__right {
+  margin-right: 5.5555555556vw;
+}
 .offers__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width: 768px) {
   .offers__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -558,8 +561,25 @@ menu {
             justify-content: normal;
   }
 }
+.offers__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .offers__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .offers__img {
   background: url(../img/icons/offer-bg.png) no-repeat center center;
+  background-size: 88%;
   width: 67%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -605,6 +625,7 @@ menu {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 4% 0 9%;
+  margin-right: 1.8888888889rem;
 }
 @media screen and (max-width: 768px) {
   .offers__content {
@@ -640,6 +661,7 @@ menu {
   max-width: 5.1111111111rem;
   max-height: 5.1111111111rem;
   padding: 0.9444444444rem 0.2777777778rem 0.6666666667rem;
+  margin-bottom: 2.8888888889rem;
 }
 .offers__parameters-image {
   width: 38px;
@@ -659,7 +681,7 @@ menu {
   font-weight: 700;
   font-size: 2rem;
   line-height: 2.3888888889rem;
-  padding-top: 5%;
+  margin-bottom: 1.3333333333rem;
 }
 @media screen and (max-width: 768px) {
   .offers__title {
@@ -670,6 +692,7 @@ menu {
   color: #666666;
   font-weight: 400;
   line-height: 1.2222222222rem;
+  margin-bottom: 1.3333333333rem;
 }
 @media screen and (max-width: 768px) {
   .offers__text {
@@ -680,6 +703,7 @@ menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 1.3333333333rem;
 }
 @media screen and (max-width: 768px) {
   .offers__property-list {
@@ -712,7 +736,8 @@ menu {
   font-weight: 300;
   font-size: 3.3333333333rem;
   line-height: 3.3333333333rem;
-  padding-right: 3.1666666667rem;
+  margin-right: 3.1666666667rem;
+  white-space: nowrap;
 }
 
 .team {
