@@ -758,6 +758,17 @@ menu {
 }
 .team__item {
   width: 12.2222222222rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .team__image {
@@ -765,16 +776,22 @@ menu {
   }
 }
 .team__link {
-  text-align: center;
-}
-.team__name {
   font-weight: 700;
   font-size: 1.1666666667rem;
   line-height: 1.3888888889rem;
 }
-.team__name::after {
+.team__link::after {
   content: url(../img/icons/arrow.png);
   padding-left: 0.2222222222rem;
+}
+.team__desc {
+  height: 0;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
+}
+.team__content {
+  text-align: center;
+  height: 3.8888888889rem;
 }
 .team__prof {
   font-weight: 400;
@@ -1295,4 +1312,65 @@ menu {
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
+}
+
+.fullscreen-menu {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .fullscreen-menu {
+    z-index: 1000;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background: #313131;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fullscreen-menu .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.fullscreen-menu__close {
+  position: absolute;
+  right: 2.3333333333rem;
+  top: 2.3333333333rem;
+}
+.fullscreen-menu__cross {
+  height: 1.1111111111rem;
+  width: 20px;
+}
+
+.menu--vertical {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 72px;
+}
+.menu--vertical .menu__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 28.3333333333rem;
+}
+.menu--vertical .menu__list .menu__item {
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }

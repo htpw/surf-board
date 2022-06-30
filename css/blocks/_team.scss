@@ -21,6 +21,10 @@
   }
   &__item{
     width: rem(220px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
   }
   &__image{
     @include tablets{
@@ -28,9 +32,6 @@
     }
   }
   &__link{
-    text-align: center;
-  }
-  &__name{
     font-weight: 700;
     font-size: rem(21px);
     line-height: rem(25px);
@@ -38,6 +39,14 @@
       content: url(../img/icons/arrow.png);
       padding-left: rem(4px);
     }
+  }
+  &__desc{
+    height: 0;
+    transition: height 0.3s;
+  }
+  &__content{
+    text-align: center;
+    height: rem(70px);
   }
   &__prof{
     font-weight: 400;
