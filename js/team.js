@@ -1,4 +1,6 @@
-const teamList = document.querySelector(".team__list");
+const teamListDesktop = document.querySelector(".team__list--version--desktop");
+const teamListTablets = document.querySelector(".team__list--version--tablets");
+
 
 function openItem(button) {
   const contentWrap = button.nextElementSibling;
@@ -16,7 +18,26 @@ function closeItem(button) {
   button.classList.remove("team__link--active");
 }
 
-teamList.addEventListener("click", e => {
+
+
+teamListDesktop.addEventListener("click", e => {
+  e.preventDefault();
+  const target = e.target;
+  const activeItem = document.querySelector(".team__link--active");
+
+  
+  if (target.classList.contains("team__link")) {
+    if (target.classList.contains("team__link--active")) {
+      closeItem(target);
+    } else {
+      closeItem(activeItem);
+      openItem(target);
+    }
+  }
+
+})
+
+teamListTablets.addEventListener("click", e => {
   e.preventDefault();
   const target = e.target;
   const activeItem = document.querySelector(".team__link--active");

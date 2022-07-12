@@ -1,15 +1,41 @@
+.bx-wrapper{
+  box-shadow: none;
+  border: none;
+  background: none;
+  & img {
+    max-width: rem(150px);
+    @include tablets{
+      max-width: rem(116px);
+    }
+  }
+}
 .offers{
   height: 100vh;
   background: #F8FAF9;
+  position: relative;
   &__arrows{
     height: 27px;
     width: 13.5px;
   }
   &__left{
-    margin-left: calc(100vw/18);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1000;
+    @include tablets{
+      top: 29%;
+      left: 17%;
+    }
   }
   &__right{
-    margin-right: calc(100vw/18);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1000;
+    @include tablets{
+      top: 29%;
+      right: 17%;
+    }
   }
   &__container{
     display: flex;
@@ -42,10 +68,6 @@
   }
   &__image{
     transform: rotate(30deg);
-    max-width: rem(150px);
-    @include tablets{
-      max-width: rem(116px);
-    }
   }
   &__content{
     width: 50%;
@@ -76,6 +98,7 @@
     max-height: rem(92px);
     padding: rem(17px) rem(5px) rem(12px);
     margin-bottom: rem(52px);
+    position: relative;
     &-image{
       width: 38px;
       height: 38px;
@@ -86,6 +109,21 @@
     @include tablets{
       display: none;
     }
+    &:hover .offers__character{
+      left: 90px;
+      opacity: 1;
+    }
+  }
+  &__character{
+    position: absolute;
+    background:rgba(255, 255, 255, 0.8);
+    width: 273px;
+    height: 291px;
+    left: -9999px;
+    top: 0;
+    border-radius: 4px;
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.06);
+    opacity: 0;
   }
   &__title{
     text-transform: uppercase;
@@ -140,5 +178,37 @@
       margin-right: rem(57px);
       white-space: nowrap;
     }
+  }
+}
+
+.character{
+  &__list{
+    display: flex;
+    flex-direction: column;
+    padding: 28px 25px 30px 30px;
+  }
+  &__item{
+    color: #000;
+    display: flex;
+    margin-bottom: 28px;
+  }
+  &__img{
+    color: #010002;
+    width: rem(24px);
+    height: rem(24px);
+    margin-right: rem(16px);
+  }
+  &__title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  &__value{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    flex:1;
+    text-align: right;
   }
 }

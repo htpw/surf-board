@@ -13,10 +13,20 @@
   &__list{
     display: flex;
     justify-content: space-between;
-    padding-bottom: 5%;
-    @include tablets{
+    margin-bottom: 5%;
+    flex-wrap: wrap;
+    &--version--desktop{
+      @include tablets{
+        display: none;
+      }
+    }
+    &--version--tablets{
+      display: none;
       flex-direction: column;
       align-items: center;
+      @include tablets{
+        display: flex;
+      }
     }
   }
   &__item{
@@ -24,29 +34,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
-  }
-  &__image{
-    @include tablets{
-      display: none;
-    }
   }
   &__link{
     font-weight: 700;
     font-size: rem(21px);
     line-height: rem(25px);
     &::after{
-      content: url(../img/icons/arrow.png);
-      padding-left: rem(4px);
+      content: url(../img/icons/arrow-up.png);
+      margin-left: rem(4px);
+    }
+    &--active{
+      &::after{
+        content: url(../img/icons/arrow-down.png);
+      }
     }
   }
   &__desc{
     height: 0;
     transition: height 0.3s;
+    overflow: hidden;
   }
   &__content{
     text-align: center;
     height: rem(70px);
+    @include tablets{
+      height: rem(360px);
+    }
   }
   &__prof{
     font-weight: 400;
