@@ -1,0 +1,50 @@
+.fixed-menu{
+  position: fixed;
+  transform: translateY(-50%);
+  right: 5%;
+  top: 50%;
+  @include tablets{
+    display: none;
+  }
+  &__item{
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px transparent #FFFFFF;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    
+    &:last-child{
+      margin-bottom: 0;
+    }
+    
+    &--active{
+      width: 18px;
+      height: 18px;
+      border: 1px solid #FFFFFF;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.0001);
+
+    } 
+  }
+  &__link{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #FFF;
+    pointer-events: all;
+  }
+  &--shadowed &__item--active{
+    border: 1px solid #000;
+    transition: border-color 0.3s;
+    }
+  &--shadowed  &__link{
+      background: #000;
+      transition: background-color 0.3s;
+    }
+  
+}
