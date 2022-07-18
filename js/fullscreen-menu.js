@@ -3,8 +3,6 @@ const fullScreenMenu = document.querySelector(".fullscreen-menu");
 const close = document.querySelector(".fullscreen-menu__close");
 const closeForTouch = $(fullScreenMenu).find(".menu__link");
 
-console.log(closeForTouch);
-
 hamburger.addEventListener("click", e => {
   e.preventDefault();
   const actualDisplay = getComputedStyle(fullScreenMenu).display;

@@ -1187,8 +1187,106 @@ menu {
     margin-bottom: 1.7222222222rem;
   }
 }
-.work__video {
+
+.player {
   padding-bottom: 9%;
+  width: 662px;
+  height: 392px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .player {
+    width: 77%;
+    height: 352px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player {
+    width: 394px;
+    height: 233px;
+  }
+}
+.player__splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../img/slider3.jpg) center center/cover no-repeat;
+  cursor: pointer;
+}
+.player__controls {
+  height: 35px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #404040;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 25px;
+}
+@media screen and (max-width: 480px) {
+  .player__controls {
+    height: 23px;
+    padding: 0 10px;
+  }
+}
+.player.active .player__splash {
+  display: none;
+}
+.player__playback {
+  width: 67%;
+  height: 20%;
+  background: #626262;
+  position: relative;
+}
+.player__playback-button {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 0%;
+  top: 50%;
+  width: 0.8333333333rem;
+  height: 0.8333333333rem;
+  border-radius: 50%;
+  background: #FEDB3F;
+}
+.player__volume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 16%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.player__volume-value {
+  width: 50%;
+  height: 5px;
+  background: #FEDB3F;
+}
+.player__volume-button {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 100%;
+  top: 50%;
+  width: 0.8333333333rem;
+  height: 0.8333333333rem;
+  border-radius: 50%;
+  background: #FEDB3F;
 }
 
 .order {
@@ -1407,6 +1505,7 @@ menu {
   height: 100%;
   background: url(../img/map.png);
   background-size: cover;
+  position: relative;
 }
 
 .footer {
