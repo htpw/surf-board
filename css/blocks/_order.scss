@@ -32,6 +32,9 @@
     flex-direction: column;
     width: rem(500px);
   }
+  @include phones{
+    width: 96%;
+  }
   &__col{
     flex: 1;
     margin-right: rem(27px);
@@ -86,7 +89,7 @@
       padding-top: 2%;
     }
     @include phones{
-     justify-content: center;
+      justify-content: center;
     }
   }
   &__btn{

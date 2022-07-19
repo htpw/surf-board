@@ -7,12 +7,16 @@
     @include tablets{
       max-width: rem(116px);
     }
+    @include phones{
+      max-width: rem(92px);
+    }
   }
 }
 .offers{
   height: 100%;
   background: #F8FAF9;
   position: relative;
+  overflow: hidden;
   &__arrows{
     height: 27px;
     width: 13.5px;

@@ -315,6 +315,7 @@ menu {
 @media screen and (max-width: 480px) {
   .hello__title {
     width: 100%;
+    font-size: 36px;
   }
 }
 .hello__subtitle {
@@ -386,6 +387,7 @@ menu {
 .advantages__title {
   color: #292929;
   margin-bottom: 0.9444444444rem;
+  text-align: center;
 }
 .advantages__subtitle {
   color: #666666;
@@ -552,11 +554,17 @@ menu {
     max-width: 6.4444444444rem;
   }
 }
+@media screen and (max-width: 480px) {
+  .bx-wrapper img {
+    max-width: 5.1111111111rem;
+  }
+}
 
 .offers {
   height: 100%;
   background: #F8FAF9;
   position: relative;
+  overflow: hidden;
 }
 .offers__arrows {
   height: 27px;
@@ -1254,8 +1262,8 @@ menu {
           transform: translate(-50%, -50%);
   left: 0%;
   top: 50%;
-  width: 0.8333333333rem;
-  height: 0.8333333333rem;
+  width: 0.7777777778rem;
+  height: 0.7777777778rem;
   border-radius: 50%;
   background: #FEDB3F;
 }
@@ -1278,14 +1286,19 @@ menu {
   height: 5px;
   background: #FEDB3F;
 }
+@media screen and (max-width: 480px) {
+  .player__volume-value {
+    height: 4px;
+  }
+}
 .player__volume-button {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   left: 100%;
   top: 50%;
-  width: 0.8333333333rem;
-  height: 0.8333333333rem;
+  width: 0.7777777778rem;
+  height: 0.7777777778rem;
   border-radius: 50%;
   background: #FEDB3F;
 }
@@ -1350,6 +1363,11 @@ menu {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 27.7777777778rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .form {
+    width: 96%;
   }
 }
 .form__col {
