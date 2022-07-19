@@ -1273,6 +1273,7 @@ menu {
   position: relative;
 }
 .player__volume-value {
+  position: relative;
   width: 50%;
   height: 5px;
   background: #FEDB3F;

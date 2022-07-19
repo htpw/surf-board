@@ -3,6 +3,36 @@ const playerContainer = $('.player');
 const heightVideo = parseInt($(playerContainer).css("height"));
 const widthVideo = parseInt($(playerContainer).css("width"));
 
+$(".player__volume-value").click(e => {
+  const barVolume = $(e.currentTarget);
+  const clickedPositionVolume = e.originalEvent.layerX;
+  const newVolumePositionPercent = (clickedPositionVolume / barVolume.width()) * 100;
+
+  $(".player__volume-button").css({
+    left: `${newVolumePositionPercent}%`
+  });
+
+  player.setVolume(newVolumePositionPercent);
+});
+
+$(".player__volume-icon").click(e => {
+  const muteIcon = $(e.currentTarget);
+
+  if (muteIcon.hasClass("active")) {
+    player.mute();
+    $(".player__volume-button").css({
+      left: `0%`
+    });
+    muteIcon.removeClass("active");
+  } else {
+    player.unMute();
+    player.setVolume(100);
+    $(".player__volume-button").css({
+      left: `100%`
+    });
+    muteIcon.addClass("active");
+  }
+});
 
 let eventsInit = () => {
   $(".player__start").click(e => {

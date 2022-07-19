@@ -82,6 +82,7 @@
     align-items: center;
     position: relative;
     &-value{
+      position: relative;
       width: 50%;
       height: 5px;
       background: #FEDB3F;
